@@ -13,3 +13,6 @@ suites:
     run_list:
       - recipe[apache::default]
     attributes:
+      apache:
+        greeting: "Whatever you like"
+       
