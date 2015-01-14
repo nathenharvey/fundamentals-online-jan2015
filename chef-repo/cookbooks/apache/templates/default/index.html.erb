@@ -3,6 +3,11 @@
   <title>Chef Fundamentals</title>
 </head>
 <body>
-  <h1>Hello, world!</h1>
+  <h1>Hello, <%= node["apache"]["greeting"] %>!</h1>
+
+  <p>
+    This is a <%= node["platform"] %> <%= node["platform_version"] %> server with
+    <%= node["memory"]["total"] %> RAM.
+  </p>
 </body>
 </html>
