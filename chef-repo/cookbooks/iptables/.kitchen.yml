@@ -1,0 +1,15 @@
+---
+driver:
+  name: docker
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: ubuntu-12.04
+
+suites:
+  - name: disable
+    run_list:
+      - recipe[iptables::disable]
+    attributes:
