@@ -1,0 +1,7 @@
+{
+  "name" : "development",
+  "description" : "The Development Environment",
+  "cookbook_versions" : {
+    "apache" : "= 0.3.0"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name" : "production",
+  "description" : "The Prodution Environment -- be careful!",
+  "cookbook_versions" : {
+    "apache" : "= 0.1.0"
+  },
+  "override_attributes" : {
+    "apache" : {
+      "greeting" : "Production"
+    }
+  }
+}
