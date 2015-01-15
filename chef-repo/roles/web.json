@@ -1,0 +1,13 @@
+{
+  "name" : "web",
+  "description" : "Web Servers",
+  "run_list" : [
+    "role[base]",
+    "recipe[apache]"
+  ],
+  "default_attributes" : {
+    "apache" : {
+      "greeting" : "dawg"
+    }
+  }
+}

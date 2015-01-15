@@ -1,0 +1,12 @@
+{
+  "name" : "base",
+  "description" : "Base role applied to all servers",
+  "run_list" : [
+    "recipe[motd]",
+    "recipe[ntpd]",
+    "recipe[users]"
+  ],
+  "default_attributes" : {
+    "company_name" : "Nathen is Awesome, Inc."
+  }
+}
