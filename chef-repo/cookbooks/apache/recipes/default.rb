@@ -18,13 +18,19 @@ service "httpd" do
   action :start
 end
 
-service "httpd" do 
+service "httpd" do
   action :enable
 end
+
+neighbors = search(:node, "chef_environment:#{node.environment()}")
+
 
 template "/var/www/html/index.html" do
   source "index.html.erb"
   group "root"
   mode "0644"
   owner "root"
+  variables(
+    :neighbors => neighbors
+  )
 end

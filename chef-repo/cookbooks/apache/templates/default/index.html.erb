@@ -5,9 +5,19 @@
 <body>
   <h1>Hello, <%= node["apache"]["greeting"] %>!</h1>
 
+  <h2>My name is <%= node["fqdn"] %></h2>
+
   <p>
     This is a <%= node["platform"] %> <%= node["platform_version"] %> server with
     <%= node["memory"]["total"] %> RAM.
   </p>
+
+<h3>My Neighborhood Includes</h3>
+<ul>
+<% @neighbors.each do |neighbor| %>
+  <li><%= neighbor["fqdn"] %></li>
+<% end %>
+</ul>
+
 </body>
 </html>
